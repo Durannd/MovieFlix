@@ -1,0 +1,1 @@
+ALTER TABLE steaming RENAME TO streaming;
