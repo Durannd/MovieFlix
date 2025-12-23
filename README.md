@@ -1,8 +1,8 @@
 # 🎬 MovieFlix API
 
-Uma API RESTful para gerenciamento de filmes, categorias e plataformas de streaming, desenvolvida com Spring Boot e PostgreSQL.
+A RESTful API for managing movies, categories, and streaming platforms, built with Spring Boot and PostgreSQL.
 
-## 🚀 Tecnologias
+## 🚀 Technologies
 
 - **Java 24**
 - **Spring Boot 3.5.4**
@@ -13,46 +13,46 @@ Uma API RESTful para gerenciamento de filmes, categorias e plataformas de stream
 - **Lombok**
 - **Maven**
 
-## 📋 Features (Funcionalidades)
+## 📋 Features
 
-- ✅ Gerenciamento de Filmes (CRUD completo)
-- ✅ Gerenciamento de Categorias
-- ✅ Gerenciamento de Plataformas de Streaming
-- ✅ Busca de filmes por categoria
-- ✅ Relacionamento Many-to-Many entre filmes, categorias e streamings
-- ✅ Sistema de registro de usuários
+- ✅ Movie Management (Complete CRUD)
+- ✅ Category Management
+- ✅ Streaming Platform Management
+- ✅ Search movies by category
+- ✅ Many-to-Many relationships between movies, categories, and streaming platforms
+- ✅ User registration system
 
-## 🏗️ Arquitetura
+## 🏗️ Architecture
 
-O projeto segue uma arquitetura em camadas:
+The project follows a layered architecture:
 
 ```
 src/main/java/br/com/ricael/movieflix/moviefliex/
-├── controller/          # Controllers REST
-├── service/            # Lógica de negócio
-├── repository/         # Camada de acesso a dados (JPA)
-├── entity/             # Entidades do domínio
-├── mapper/             # Conversão DTO ↔ Entity
-├── request/            # DTOs de requisição
-└── response/           # DTOs de resposta
+├── controller/          # REST Controllers
+├── service/            # Business logic
+├── repository/         # Data access layer (JPA)
+├── entity/             # Domain entities
+├── mapper/             # DTO ↔ Entity conversion
+├── request/            # Request DTOs
+└── response/           # Response DTOs
 ```
 
-## 🔧 Configuração e Instalação
+## 🔧 Setup and Installation
 
-### Pré-requisitos
+### Prerequisites
 
-- Java 24 ou superior
-- PostgreSQL 12+ instalado e rodando
+- Java 24 or higher
+- PostgreSQL 12+ installed and running
 - Maven 3.6+
 
-### Configuração do Banco de Dados
+### Database Configuration
 
-1. Crie um banco de dados PostgreSQL:
+1. Create a PostgreSQL database:
 ```sql
 CREATE DATABASE postgres;
 ```
 
-2. Configure as credenciais no arquivo `src/main/resources/application.yaml`:
+2. Configure credentials in the `src/main/resources/application.yaml` file:
 ```yaml
 spring:
   datasource:
@@ -61,56 +61,56 @@ spring:
     password: postgres
 ```
 
-As tabelas serão criadas automaticamente pelo Flyway na primeira execução.
+Tables will be created automatically by Flyway on first run.
 
-### Executando a Aplicação
+### Running the Application
 
-Execute o projeto usando Maven:
+Run the project using Maven:
 
 ```bash
 ./mvnw spring-boot:run
 ```
 
-A aplicação estará disponível em: `http://localhost:8080`
+The application will be available at: `http://localhost:8080`
 
-## 🌐 Principais Endpoints
+## 🌐 Main Endpoints
 
-### Filmes
+### Movies
 
-| Método | Endpoint | Descrição |
-|--------|----------|-----------|
-| `GET` | `/movieflix/movie` | Listar todos os filmes |
-| `GET` | `/movieflix/movie/{id}` | Buscar filme por ID |
-| `GET` | `/movieflix/movie/search?category={id}` | Buscar filmes por categoria |
-| `POST` | `/movieflix/movie` | Criar novo filme |
-| `PUT` | `/movieflix/movie/{id}` | Atualizar filme |
-| `DELETE` | `/movieflix/movie/{id}` | Deletar filme |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/movieflix/movie` | List all movies |
+| `GET` | `/movieflix/movie/{id}` | Get movie by ID |
+| `GET` | `/movieflix/movie/search?category={id}` | Search movies by category |
+| `POST` | `/movieflix/movie` | Create new movie |
+| `PUT` | `/movieflix/movie/{id}` | Update movie |
+| `DELETE` | `/movieflix/movie/{id}` | Delete movie |
 
-### Categorias
+### Categories
 
-| Método | Endpoint | Descrição |
-|--------|----------|-----------|
-| `GET` | `/movieflix/category` | Listar todas as categorias |
-| `GET` | `/movieflix/category/{id}` | Buscar categoria por ID |
-| `POST` | `/movieflix/category` | Criar categoria |
-| `DELETE` | `/movieflix/category/{id}` | Deletar categoria |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/movieflix/category` | List all categories |
+| `GET` | `/movieflix/category/{id}` | Get category by ID |
+| `POST` | `/movieflix/category` | Create category |
+| `DELETE` | `/movieflix/category/{id}` | Delete category |
 
-### Streamings
+### Streaming Platforms
 
-| Método | Endpoint | Descrição |
-|--------|----------|-----------|
-| `GET` | `/movieflix/streaming` | Listar todos os streamings |
-| `GET` | `/movieflix/streaming/{id}` | Buscar streaming por ID |
-| `POST` | `/movieflix/streaming` | Criar streaming |
-| `DELETE` | `/movieflix/streaming/{id}` | Deletar streaming |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/movieflix/streaming` | List all streaming platforms |
+| `GET` | `/movieflix/streaming/{id}` | Get streaming platform by ID |
+| `POST` | `/movieflix/streaming` | Create streaming platform |
+| `DELETE` | `/movieflix/streaming/{id}` | Delete streaming platform |
 
-### Autenticação
+### Authentication
 
-| Método | Endpoint | Descrição |
-|--------|----------|-----------|
-| `POST` | `/movieflix/auth/register` | Registrar novo usuário |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `POST` | `/movieflix/auth/register` | Register new user |
 
-## 📊 Modelo de Dados
+## 📊 Data Model
 
 ### Movie
 
@@ -157,46 +157,46 @@ A aplicação estará disponível em: `http://localhost:8080`
 }
 ```
 
-## 🗄️ Migrations do Banco de Dados
+## 🗄️ Database Migrations
 
-O projeto utiliza Flyway para versionamento do banco de dados. As migrations são executadas automaticamente na inicialização:
+The project uses Flyway for database versioning. Migrations are executed automatically on startup:
 
-- **V2__Add_table_category.sql** - Cria tabela de categorias
-- **V3__Create_table_streaming.sql** - Cria tabela de streamings
-- **V4__Refact_table_streaming.sql** - Refatoração da tabela streaming
-- **V5__create_table_movie.sql** - Cria tabela de filmes
-- **V6__create_movie_category.sql** - Cria tabela de relacionamento filme-categoria
-- **V7__create_movie_streaming.sql** - Cria tabela de relacionamento filme-streaming
-- **V8__create_user_table.sql** - Cria tabela de usuários
+- **V2__Add_table_category.sql** - Creates categories table
+- **V3__Create_table_streaming.sql** - Creates streaming platforms table
+- **V4__Refact_table_streaming.sql** - Refactors streaming table
+- **V5__create_table_movie.sql** - Creates movies table
+- **V6__create_movie_category.sql** - Creates movie-category relationship table
+- **V7__create_movie_streaming.sql** - Creates movie-streaming relationship table
+- **V8__create_user_table.sql** - Creates users table
 
-## 🎯 Destaques Técnicos
+## 🎯 Technical Highlights
 
-- 🏛️ **Arquitetura RESTful** seguindo boas práticas
-- 📦 **Padrão DTO** para transferência de dados
-- 🔄 **Mappers** para conversão Entity-DTO
-- 🔗 **Relacionamentos JPA** bem definidos (Many-to-Many)
-- 📈 **Migrations automáticas** com Flyway
-- ✨ **Redução de boilerplate** com Lombok
-- ✅ **Validação** de dados com Spring Validation
+- 🏛️ **RESTful Architecture** following best practices
+- 📦 **DTO Pattern** for data transfer
+- 🔄 **Mappers** for Entity-DTO conversion
+- 🔗 **Well-defined JPA Relationships** (Many-to-Many)
+- 📈 **Automatic Migrations** with Flyway
+- ✨ **Boilerplate Reduction** with Lombok
+- ✅ **Data Validation** with Spring Validation
 
-## 🛠️ Melhorias Futuras
+## 🛠️ Future Improvements
 
-- [ ] Implementar autenticação e autorização (Spring Security + JWT)
-- [ ] Adicionar paginação nas listagens
-- [ ] Implementar busca por título do filme
-- [ ] Adicionar testes unitários e de integração
-- [ ] Sistema de avaliações de usuários
-- [ ] API de recomendação de filmes
-- [ ] Documentação com Swagger/OpenAPI
+- [ ] Implement authentication and authorization (Spring Security + JWT)
+- [ ] Add pagination to listings
+- [ ] Implement search by movie title
+- [ ] Add unit and integration tests
+- [ ] User rating system
+- [ ] Movie recommendation API
+- [ ] Documentation with Swagger/OpenAPI
 
-## 👨‍💻 Autor
+## 👨‍💻 Author
 
 **Ricael Durand** - <a href="https://github.com/Durannd">GitHub</a>
 
-## 📝 Licença
+## 📝 License
 
-Este projeto foi desenvolvido para fins educacionais e de portfólio.
+This project was developed for educational and portfolio purposes.
 
 ---
 
-⭐ Se você achou este projeto útil, considere dar uma estrela!
+⭐ If you found this project useful, consider giving it a star!
