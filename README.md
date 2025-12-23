@@ -311,15 +311,28 @@ br.com.ricael.movieflix.moviefliex
     └── UserMapper.java
 ```
 
+## 📚 Documentação Adicional
+
+Este projeto possui documentação completa organizada nos seguintes arquivos:
+
+| Documento | Descrição |
+|-----------|-----------|
+| [README.md](README.md) | Visão geral do projeto (este arquivo) |
+| [API_DOCUMENTATION.md](API_DOCUMENTATION.md) | Documentação detalhada de todos os endpoints da API |
+| [DATABASE.md](DATABASE.md) | Estrutura do banco de dados e migrations |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Guia completo para contribuidores |
+| [QUICK_REFERENCE.md](QUICK_REFERENCE.md) | Guia de referência rápida para desenvolvedores |
+
 ## 🤝 Contribuindo
 
-Contribuições são bem-vindas! Sinta-se à vontade para:
+Contribuições são bem-vindas! Para contribuir com o projeto:
 
-1. Fazer fork do projeto
-2. Criar uma branch para sua feature (`git checkout -b feature/NovaFuncionalidade`)
-3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
-4. Push para a branch (`git push origin feature/NovaFuncionalidade`)
-5. Abrir um Pull Request
+1. Leia o guia completo de contribuição: [CONTRIBUTING.md](CONTRIBUTING.md)
+2. Faça fork do projeto
+3. Crie uma branch para sua feature (`git checkout -b feature/NovaFuncionalidade`)
+4. Commit suas mudanças (`git commit -m 'feat: adiciona nova funcionalidade'`)
+5. Push para a branch (`git push origin feature/NovaFuncionalidade`)
+6. Abra um Pull Request
 
 ## 📄 Licença
 
